@@ -18,7 +18,18 @@
     },
     "plugins": [
         "react",
-        "prettier"
+        "prettier",
+        "testing-library"
+    ],
+    "overrides": [
+        // Only uses Testing Library lint rules in test files
+        {
+          "files": [
+            "**/__tests__/**/*.[jt]s?(x)",
+            "**/?(*.)+(spec|test).[jt]s?(x)"
+          ],
+          "extends": ["plugin:testing-library/react"]
+        }
     ],
     "rules": {
         "prettier/prettier": [
@@ -26,6 +37,9 @@
           ],
         "react/react-in-jsx-scope": "off",
         "react/prop-types": "off",
-        "react/jsx-props-no-spreading": "off"
+        "react/jsx-props-no-spreading": "off",
+        "no-undef": "off",
+        "import/no-unresolved": "off",
+        "import/extensions": "off"
     }
 }
