@@ -40,6 +40,7 @@
         "react/jsx-props-no-spreading": "off",
         "no-undef": "off",
         "import/no-unresolved": "off",
-        "import/extensions": "off"
+        "import/extensions": "off",
+        "jsx-a11y/anchor-is-valid": "off"
     }
 }
