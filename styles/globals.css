@@ -1,3 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Quintessential&family=Roboto:wght@100&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --fresh: #4abdac;
+  --vermillion: #fc4a1a;
+  --sunshine: #f7b733;
+  --clean: #dfdce3;
+}
+
 html,
 body {
   padding: 0;
