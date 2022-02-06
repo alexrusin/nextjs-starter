@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Quintessential&family=Roboto:wght@100&display=swap');
+
+:root {
+  --fresh: #4abdac;
+  --vermillion: #fc4a1a;
+  --sunshine: #f7b733;
+  --clean: #dfdce3;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
