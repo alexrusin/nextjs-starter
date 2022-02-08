@@ -16,14 +16,26 @@ export default function Counter() {
       <h1>
         Count: <span>{count}</span>
       </h1>
-      <div style={{ display: 'flex', gap: '1em' }}>
-        <button type="button" onClick={() => dispatch(incrementCount())}>
+      <div className="flex gap-4 pt-2">
+        <button
+          type="button"
+          className="btn"
+          onClick={() => dispatch(incrementCount())}
+        >
           +1
         </button>
-        <button type="button" onClick={() => dispatch(decrementCount())}>
+        <button
+          type="button"
+          className="btn"
+          onClick={() => dispatch(decrementCount())}
+        >
           -1
         </button>
-        <button type="button" onClick={() => dispatch(resetCount())}>
+        <button
+          type="button"
+          className="btn"
+          onClick={() => dispatch(resetCount())}
+        >
           Reset
         </button>
       </div>

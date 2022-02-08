@@ -19,7 +19,7 @@ exports[`renders homepage unchanged 1`] = `
         </a>
       </h1>
       <div
-        style="display: flex; gap: 2em; color: blue; padding-top: 2em;"
+        class="flex gap-10 pt-4 text-blue-500"
       >
         <a
           href="/quote"
@@ -33,7 +33,7 @@ exports[`renders homepage unchanged 1`] = `
         </a>
       </div>
       <p
-        class="description"
+        class="description font-quinto text-fresh"
       >
         Get started by editing
          

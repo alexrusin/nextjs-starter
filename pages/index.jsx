@@ -17,14 +17,7 @@ export default function Home() {
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
 
-        <div
-          style={{
-            display: 'flex',
-            gap: '2em',
-            color: 'blue',
-            paddingTop: '2em',
-          }}
-        >
+        <div className="flex gap-10 pt-4 text-blue-500">
           <Link href="/quote">
             <a>Quote of the day</a>
           </Link>
@@ -33,7 +26,7 @@ export default function Home() {
           </Link>
         </div>
 
-        <p className={styles.description}>
+        <p className={`${styles.description} font-quinto text-fresh`}>
           Get started by editing{' '}
           <code className={styles.code}>pages/index.js</code>
         </p>
