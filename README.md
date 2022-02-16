@@ -12,3 +12,26 @@
 - Husky
 
 If you need MySQL integration, please use [Next.js Sequelize Starter Template](https://github.com/alexrusin/nextjs-starter-sequelize).
+
+### Installation
+
+```bash
+# clone repo
+git clone git@github.com:alexrusin/nextjs-starter.git my-project
+
+# change into project directory
+cd my-project
+
+# install dependencies
+yarn install
+```
+
+### Development
+
+```bash
+# run development server
+yarn dev
+
+# run test with watcher
+yarn test --watch
+```
