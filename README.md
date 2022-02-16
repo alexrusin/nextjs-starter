@@ -10,3 +10,5 @@
 - Winston Logger
 - Tailwind CSS
 - Husky
+
+If you need MySQL integration, please use [Next.js Sequelize Starter Template](https://github.com/alexrusin/nextjs-starter-sequelize).
