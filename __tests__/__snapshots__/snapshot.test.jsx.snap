@@ -18,6 +18,9 @@ exports[`renders homepage unchanged 1`] = `
           Next.js!
         </a>
       </h1>
+      <h2>
+        Version 0.2.0
+      </h2>
       <div
         class="flex gap-10 pt-4 text-blue-500"
       >
