@@ -4,14 +4,20 @@ phases:
     commands:
       - echo Logging in to Amazon ECR...
       - $(aws ecr get-login --no-include-email --region $AWS_DEFAULT_REGION)
+      - REPOSITORY_URI=$AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/nextjs-starter
+      - IMAGE_TAG=latest
   build:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...
       - docker build -t  web:1 .
-      - docker tag web:1 $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/nextjs-starter
+      - docker tag web:1 $REPOSITORY_URI
   post_build:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
-      - docker push $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/nextjs-starter
+      - docker push $REPOSITORY_URI
+      - echo Writing image definitions file...
+      - printf '[{"name":"nextjs-starter","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
+artifacts:
+  files: imagedefinitions.json
