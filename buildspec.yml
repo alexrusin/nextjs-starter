@@ -1,4 +1,7 @@
 version: 0.2
+env:
+  variables:
+    NEXT_PUBLIC_APP_NAME: 'My Next.js Starter App'
 phases:
   pre_build:
     commands:
