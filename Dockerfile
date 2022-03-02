@@ -21,8 +21,8 @@ COPY . .
 # Uncomment the following line in case you want to disable telemetry during the build.
 # ENV NEXT_TELEMETRY_DISABLED 1
 
-ARG NEXT_PUBLIC_APP_NAME
-ENV NEXT_PUBLIC_APP_NAME = $NEXT_PUBLIC_APP_NAME
+ARG PUBLIC_APP_NAME
+ENV NEXT_PUBLIC_APP_NAME = $PUBLIC_APP_NAME
 
 RUN yarn build
 
