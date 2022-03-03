@@ -10,10 +10,14 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...
-      - docker build --build-arg PUBLIC_APP_NAME -t  web:1 .
+      - docker --build-arg PUBLIC_APP_NAME build -t  web:1 .
       - docker tag web:1 $REPOSITORY_URI
   post_build:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
       - docker push $REPOSITORY_URI
+      - echo Writing image definitions file...
+      - printf '[{"name":"nextjs-starter","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
+artifacts:
+  files: imagedefinitions.json

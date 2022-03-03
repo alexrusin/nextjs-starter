@@ -17,7 +17,7 @@ export default function Home() {
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
 
-        <h2>Version 0.4.0</h2>
+        <h2>Version 0.5.0</h2>
 
         <h2>{process.env.NEXT_PUBLIC_APP_NAME}</h2>
 
