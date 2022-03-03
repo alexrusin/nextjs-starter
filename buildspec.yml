@@ -10,7 +10,7 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...
-      - docker --build-arg PUBLIC_APP_NAME build -t  web:1 .
+      - docker build --build-arg PUBLIC_APP_NAME -t  web:1 .
       - docker tag web:1 $REPOSITORY_URI
   post_build:
     commands:
