@@ -47,6 +47,10 @@ COPY --from=builder /app/package.json ./package.json
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
 
+USER root
+
+RUN mkdir -p /app/logs && chown -R nextjs:nodejs /app/logs && chmod -R 777 /app/logs
+
 USER nextjs
 
 EXPOSE 3000
